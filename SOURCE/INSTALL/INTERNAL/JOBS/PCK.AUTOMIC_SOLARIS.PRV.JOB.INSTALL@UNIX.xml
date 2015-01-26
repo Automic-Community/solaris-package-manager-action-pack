@@ -152,7 +152,7 @@
 
 :if &UC4RB_PKG_FAIL_IF_INSTALLED# = "YES"
 ! BUG: Doesn't work with HTTP
-  set -- `pkginfo -l &src# &UC4RB_PKG_FILES# | awk '/PKGINST:/ {name=$2} /VERSION:/ {print $2, name}`
+  set -- `pkginfo -l &src# &UC4RB_PKG_NAME# | awk '/PKGINST:/ {name=$2} /VERSION:/ {print $2, name}`
   installed=1
   while [ $# -gt 0 ]; do
     name=$1
@@ -169,6 +169,7 @@
 :endif
 
 pkgadd -n &admin# &response# &global# &root# &spool# &verbose# &proxy# &src# &UC4RB_PKG_NAME#
+
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_SHELL_CMD@UNIX]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">
