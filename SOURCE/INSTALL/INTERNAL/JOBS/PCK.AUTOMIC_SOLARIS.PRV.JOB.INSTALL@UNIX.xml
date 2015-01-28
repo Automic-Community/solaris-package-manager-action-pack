@@ -153,13 +153,14 @@
 
 :if &UC4RB_PKG_FAIL_IF_INSTALLED# = "YES"
 ! BUG: Doesn't work with HTTP
+  echo '\n'
   set -- `pkginfo -l &src# &UC4RB_PKG_NAME# | awk '/PKGINST:/ {name=$2} /VERSION:/ {print $2, name}`
-  installed=1
+  installed=0
   while [ $# -gt 0 ]; do
     name=$1
     shift
     if pkginfo -qiv $name; then
-      installed=0
+      installed=1
       break
     fi
   done

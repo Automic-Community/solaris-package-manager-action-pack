@@ -136,7 +136,7 @@
 :endif
 
 echo "### begin pkginfo output ###"
-pkginfo &cat# &arch# &dev# &filter# &format# "&UC4RB_PKG_NAME#"
+pkginfo &cat# &arch# &dev# &filter# &format# &UC4RB_PKG_NAME#
 echo "### end pkginfo output ###"]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">

@@ -10,19 +10,195 @@
 <DESIGNER/>
 </PROMPTDESIGNER>
 <PROMPTSETXUI state="1">
-<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="279" top="4" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Parameters"><properties><entry name="text">Parameters</entry><entry name="modifiable">0</entry></properties><text enabled="1" fill="b" focus="0" id="UC4RB_PACKAGE_NAMEs.00" inputassistance="0" len="" nl="1" regex="" separator=";" showaspassword="0" text="Package name" tooltip="Specifies the package to be removed. The format pkginst.* can be used to remove all instances of a package.    Example: to remove all instances of the package SUNWjunk, specify SUNWjunk.* as parameter value.    (Implementation note: the asterisk character (*) is a special character to some shells and may need to be escaped. In the C-Shell, &quot;*&quot; must be surrounded by single quotes (&apos;) or preceded by a backslash (\).)" upper="0" required="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Package name</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_PACKAGE_NAMEs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Specifies the package to be removed. The format pkginst.* can be used to remove all instances of a package.
-
-
-
+<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="0" top="0" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Parameters"><properties><entry name="text">Parameters</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_PACKAGE_NAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" separator=";" showaspassword="0" text="Package name" tooltip="Specifies the package to be removed. The format pkginst.* can be used to remove all instances of a package.    Example: to remove all instances of the package SUNWjunk, specify SUNWjunk.* as parameter value.    (Implementation note: the asterisk character (*) is a special character to some shells and may need to be escaped. In the C-Shell, &quot;*&quot; must be surrounded by single quotes (&apos;) or preceded by a backslash (\).)" upper="0" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Package name</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_PACKAGE_NAMEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the package to be removed. The format pkginst.* can be used to remove all instances of a package.
 Example: to remove all instances of the package SUNWjunk, specify SUNWjunk.* as parameter value.
-
-
-
-(Implementation note: the asterisk character (*) is a special character to some shells and may need to be escaped. In the C-Shell, &quot;*&quot; must be surrounded by single quotes (&apos;) or preceded by a backslash (\).)</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><dynradiogroup enabled="1" fill="b" focus="0" id="UC4RB_FAIL_IF_NOT_INSTALLEDs.00" nl="1" quotes="" text="Fail if not installed" tooltip="If set to &apos;yes&apos;, the runbook function fails if the package is not installed." alt="1" required="0"><properties><entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry><entry name="text">Fail if not installed</entry><entry name="quotes"/><entry name="id">UC4RB_FAIL_IF_NOT_INSTALLEDs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip">If set to &apos;yes&apos;, the runbook function fails if the package is not installed.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/></properties></dynradiogroup><text enabled="1" fill="b" focus="0" id="UC4RB_ADMIN_FILEs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Admin file" tooltip="Use the installation administration file, admin, in place of the default admin file. pkgrm first looks in the current working directory for the administration file. If the specified administration file is not in the current working directory, pkgrm looks in the /var/sadm/install/admin directory for the administration file.    Uses the option &quot;-a&quot; at the command line." upper="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Admin file</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_ADMIN_FILEs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Use the installation administration file, admin, in place of the default admin file. pkgrm first looks in the current working directory for the administration file. If the specified administration file is not in the current working directory, pkgrm looks in the /var/sadm/install/admin directory for the administration file.
-
-
-
-Uses the option &quot;-a&quot; at the command line.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><dynradiogroup enabled="1" fill="b" focus="0" id="UC4RB_REMOVE_FROM_FSs.00" nl="1" quotes="" text="Remove from client&apos;s file system" tooltip="Remove the package files from the client&apos;s file system, absolutely. If a file is shared with other packages, the default behavior is to not remove the file from the client&apos;s file system." alt="1" required="0"><properties><entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry><entry name="text">Remove from client&apos;s file system</entry><entry name="quotes"/><entry name="id">UC4RB_REMOVE_FROM_FSs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip">Remove the package files from the client&apos;s file system, absolutely. If a file is shared with other packages, the default behavior is to not remove the file from the client&apos;s file system.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/></properties></dynradiogroup><text enabled="1" fill="b" focus="0" id="UC4RB_ROOT_PATHs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Root path" tooltip="Defines the full path name of a directory to use as the root_path. All files, including package system information files, are relocated to a directory tree starting in the specified root_path. The root file system of any non-global zones must not be referenced with the &apos;Root path&apos; option. Doing so might damage the global zone&apos;s file system, might compromise the security of the global zone, and might damage the non-global zone&apos;s file system." upper="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Root path</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_ROOT_PATHs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Defines the full path name of a directory to use as the root_path. All files, including package system information files, are relocated to a directory tree starting in the specified root_path. The root file system of any non-global zones must not be referenced with the &apos;Root path&apos; option. Doing so might damage the global zone&apos;s file system, might compromise the security of the global zone, and might damage the non-global zone&apos;s file system.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><text enabled="1" fill="b" focus="0" id="UC4RB_REMOVE_ONLY_FROM_SPOOLs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Remove from spool" tooltip="Remove the specified package(s) only from the directory &amp;UC4RB_REMOVE_ONLY_FROM_SPOOL# but don&apos;t uninstall it." upper="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Remove from spool</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_REMOVE_ONLY_FROM_SPOOLs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Remove the specified package(s) only from the directory &amp;UC4RB_REMOVE_ONLY_FROM_SPOOL# but don&apos;t uninstall it.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><dynradiogroup enabled="1" fill="b" focus="0" id="UC4RB_VERBOSEs.00" nl="1" quotes="" text="Verbose" tooltip="Trace all of the scripts that get executed by pkgrm, located in the pkginst/install directory. This option is used for debugging the procedural and non-procedural scripts." alt="1" required="0"><properties><entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry><entry name="text">Verbose</entry><entry name="quotes"/><entry name="id">UC4RB_VERBOSEs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip">Trace all of the scripts that get executed by pkgrm, located in the pkginst/install directory. This option is used for debugging the procedural and non-procedural scripts.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/></properties></dynradiogroup><text enabled="1" fill="b" focus="0" id="UC4RB_SUDO_PASSWORDs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="1" text="Sudo password" tooltip="Sudo password." upper="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Sudo password</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_SUDO_PASSWORDs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">1</entry><entry name="tooltip">Sudo password.</entry><entry name="customfield"/><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text></readpanel></dialog>]]></XUIEDITOR>
+(Implementation note: the asterisk character (*) is a special character to some shells and may need to be escaped. In the C-Shell, &quot;*&quot; must be surrounded by single quotes (&apos;) or preceded by a backslash (\).)</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_FAIL_IF_NOT_INSTALLEDs.00" nl="1" quotes="" text="Fail if not installed" tooltip="If set to &apos;yes&apos;, the runbook function fails if the package is not installed." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Fail if not installed</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_FAIL_IF_NOT_INSTALLEDs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">If set to &apos;yes&apos;, the runbook function fails if the package is not installed.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_ADMIN_FILEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Admin file" tooltip="Use the installation administration file, admin, in place of the default admin file. pkgrm first looks in the current working directory for the administration file. If the specified administration file is not in the current working directory, pkgrm looks in the /var/sadm/install/admin directory for the administration file.    Uses the option &quot;-a&quot; at the command line." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Admin file</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_ADMIN_FILEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Use the installation administration file, admin, in place of the default admin file. pkgrm first looks in the current working directory for the administration file. If the specified administration file is not in the current working directory, pkgrm looks in the /var/sadm/install/admin directory for the administration file.
+Uses the option &quot;-a&quot; at the command line.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_REMOVE_FROM_FSs.00" nl="1" quotes="" text="Remove from client&apos;s file system" tooltip="Remove the package files from the client&apos;s file system, absolutely. If a file is shared with other packages, the default behavior is to not remove the file from the client&apos;s file system." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Remove from client&apos;s file system</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_REMOVE_FROM_FSs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Remove the package files from the client&apos;s file system, absolutely. If a file is shared with other packages, the default behavior is to not remove the file from the client&apos;s file system.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_ROOT_PATHs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Root path" tooltip="Defines the full path name of a directory to use as the root_path. All files, including package system information files, are relocated to a directory tree starting in the specified root_path. The root file system of any non-global zones must not be referenced with the &apos;Root path&apos; option. Doing so might damage the global zone&apos;s file system, might compromise the security of the global zone, and might damage the non-global zone&apos;s file system." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Root path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_ROOT_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Defines the full path name of a directory to use as the root_path. All files, including package system information files, are relocated to a directory tree starting in the specified root_path. The root file system of any non-global zones must not be referenced with the &apos;Root path&apos; option. Doing so might damage the global zone&apos;s file system, might compromise the security of the global zone, and might damage the non-global zone&apos;s file system.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_REMOVE_ONLY_FROM_SPOOLs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Remove from spool" tooltip="Remove the specified package(s) only from the directory &amp;UC4RB_REMOVE_ONLY_FROM_SPOOL# but don&apos;t uninstall it." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Remove from spool</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_REMOVE_ONLY_FROM_SPOOLs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Remove the specified package(s) only from the directory &amp;UC4RB_REMOVE_ONLY_FROM_SPOOL# but don&apos;t uninstall it.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_VERBOSEs.00" nl="1" quotes="" text="Verbose" tooltip="Trace all of the scripts that get executed by pkgrm, located in the pkginst/install directory. This option is used for debugging the procedural and non-procedural scripts." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Verbose</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_VERBOSEs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Trace all of the scripts that get executed by pkgrm, located in the pkginst/install directory. This option is used for debugging the procedural and non-procedural scripts.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SUDO_PASSWORDs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="1" text="Sudo password" tooltip="Sudo password." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Sudo password</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_SUDO_PASSWORDs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">1</entry>
+            <entry name="tooltip">Sudo password.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
 <DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_PACKAGE_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_PACKAGE_NAME#" ReadFromTable="OPSE"></UC4RB_PACKAGE_NAMEs.00><UC4RB_FAIL_IF_NOT_INSTALLEDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_FAIL_IF_NOT_INSTALLED#" ReadFromTable="OPSE">NO</UC4RB_FAIL_IF_NOT_INSTALLEDs.00><UC4RB_ADMIN_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ADMIN_FILE#" ReadFromTable="OPSE"></UC4RB_ADMIN_FILEs.00><UC4RB_REMOVE_FROM_FSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_REMOVE_FROM_FS#" ReadFromTable="OPSE">NO</UC4RB_REMOVE_FROM_FSs.00><UC4RB_ROOT_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ROOT_PATH#" ReadFromTable="OPSE"></UC4RB_ROOT_PATHs.00><UC4RB_REMOVE_ONLY_FROM_SPOOLs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_REMOVE_ONLY_FROM_SPOOL#" ReadFromTable="OPSE"></UC4RB_REMOVE_ONLY_FROM_SPOOLs.00><UC4RB_VERBOSEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_VERBOSE#" ReadFromTable="OPSE">NO</UC4RB_VERBOSEs.00><UC4RB_SUDO_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SUDO_PASSWORD#" ReadFromTable="OPSE"></UC4RB_SUDO_PASSWORDs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
