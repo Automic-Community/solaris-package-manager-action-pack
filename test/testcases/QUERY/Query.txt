@@ -1,0 +1,39 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Suite Setup
+Force Tags        QUERY    unix
+Test Template     Query Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    PACKAGENAME    CATALOG        RETURN CODE    RETURN STATUS                   RETURN REPORT
+Query Package Name Only
+                      SMCnano        application    0              ${ENDED_OK - ended normally}    SMCnano
+
+Query Package Name Not Exist
+                      NotExist       application    0              ${ENDED_OK - ended normally}    ERROR: information for "NotExist" was not found
+
+Query Package Name Empty Catalog Empty
+                      ${EMPTY}       ${EMPTY}       0              ${ENDED_OK - ended normally}    SUNW1251f
+
+Query Package Name Empty Catalog System
+                      ${EMPTY}       system         0              ${ENDED_OK - ended normally}    SUNW1251f
+
+Query Package Name Empty Catalog Application
+                      ${EMPTY}       application    0              ${ENDED_OK - ended normally}    SUNWautoef
+
+*** Keywords ***
+Query Template
+    [Arguments]    ${name}    ${catalog}    ${returnCode}    ${returnStatus}    ${returnReport}
+    Init Action    ${ACTION_QUERY}
+    Action Set    ${PRT_QUERY_PKG_NAME}    ${name}
+    Action Set    ${PRT_QUERY_FILTER_BY_CAT}    ${catalog}
+    Action Set    ${PRT_QUERY_FILTER_BY_ARCH}    sparc
+    Action Set    ${PRT_QUERY_SEARCH_FILTER}    all
+    Action Set    ${PRT_QUERY_OUTPUT_FORMAT}    package abbreviation, package name, architecture, version
+    Action Set Timeout    1800
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${returnReport}

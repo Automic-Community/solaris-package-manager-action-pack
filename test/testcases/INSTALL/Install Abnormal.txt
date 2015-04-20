@@ -1,0 +1,36 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Suite Setup
+Force Tags        INSTALL    unix
+Test Template     Install Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    NAME       SOURCE                                          FAILIFINSTALLED    RETURNCODE    RETURNSTATUS                    RETURNREPORT
+Install When Package Already Exist Fail No
+                      SMCnano    ${_WORKING_DIR}/nano-2.0.9-sol10-sparc-local    NO                 0             ${ENDED_OK - ended normally}    package which is already installed
+
+Install When Package Already Exist Fail Yes
+                      SMCnano    ${_WORKING_DIR}/nano-2.0.9-sol10-sparc-local    YES                6             ENDED_NOT_OK - aborted          All packages already installed!
+
+Install When Package Source Not Exist
+                      SMCnano    ${_WORKING_DIR}/notexist                        NO                 99            ENDED_NOT_OK - aborted          ERROR: attempt to process datastream failed
+
+*** Keywords ***
+Install Template
+    [Arguments]    ${name}    ${source}    ${failIfInstalled}    ${returnCode}    ${returnStatus}    ${returnReport}
+    Init Action    ${ACTION_INSTALL}
+    Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
+    Action Set    ${PRT_INSTALL_PKG_SRC}    ${source}
+    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    BoulderDash
+    Action Execute
+    Init Action    ${ACTION_INSTALL}
+    Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
+    Action Set    ${PRT_INSTALL_PKG_SRC}    ${source}
+    Action Set    ${PRT_INSTALL_PKG_FAIL_IF_INSTALLED}    ${failIfInstalled}
+    Action Set    ${PRT_INSTALL_SUDO_PASSWORD}    BoulderDash
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${returnReport}

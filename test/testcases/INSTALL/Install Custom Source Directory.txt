@@ -1,0 +1,36 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Suite Setup
+Force Tags        INSTALL    unix
+Test Template     Install Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    NAME       SOURCE                                          RETURN CODE    RETURN STATUS                   RETURN REPORT
+Install Nano Package
+                      SMCnano    ${_WORKING_DIR}/nano-2.0.9-sol10-sparc-local    0              ${ENDED_OK - ended normally}    Installation of <SMCnano> was successful.
+
+*** Keywords ***
+Install Template
+    [Arguments]    ${name}    ${source}    ${returnCode}    ${returnStatus}    ${returnReport}
+    Init Action    ${ACTION_REMOVE}
+    Action Set    ${PRT_REMOVE_PACKAGE_NAME}    ${name}
+    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    BoulderDash
+    Action Execute
+    Init Action    ${ACTION_INSTALL}
+    Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
+    Action Set    ${PRT_INSTALL_PKG_SRC}    ${source}
+    #Action Set    ${PRT_INSTALL_PKG_FAIL_IF_INSTALLED}    ${input2}
+    #Action Set    ${PRT_INSTALL_ADMIN_FILE}    ${input2}
+    #Action Set    ${PRT_INSTALL_RESPONSE_FILE}    ${input2}
+    #Action Set    ${PRT_INSTALL_GLOBAL_ZONE}    ${input2}
+    #Action Set    ${PRT_INSTALL_ROOT_PATH}    ${input2}
+    #Action Set    ${PRT_INSTALL_WRITE_SPOOL_DIR}    ${input2}
+    #Action Set    ${PRT_INSTALL_VERBOSE}    ${input2}
+    #Action Set    ${PRT_INSTALL_RPM_HTTP_PROXY}    ${input2}
+    Action Set    ${PRT_INSTALL_SUDO_PASSWORD}    BoulderDash
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${returnReport}
