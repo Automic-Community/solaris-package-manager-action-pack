@@ -11,7 +11,6 @@ ${_WORKING_DIR}    /
 
 *** Key Words ***
 Init AE And Package
-    Prepare Package    PCK.AUTOMIC_SOLARIS
     Action Connect    ${_AE_HOST}    ${_AE_PORT}    ${_AE_USER}    ${_AE_PASS}    ${_AE_TEMP_FOLD}
 
 Init Win Server
