@@ -2,7 +2,7 @@
 Documentation     NOTE:
 ...               add note here
 Suite Setup       Suite Setup
-Force Tags        INSTALL    unix
+Force Tags        INSTALL
 Test Template     Install Template
 Resource          ../../resources/keywords.txt
 
