@@ -4,7 +4,7 @@
 <Title/>
 <ArchiveKey1/>
 <ArchiveKey2/>
-<OH_SubType>STATIC</OH_SubType>
+<OH_SubType/>
 </HEADER>
 <PROMPTDESIGNER state="1">
 <DESIGNER/>
@@ -125,7 +125,7 @@ Example: system,application</entry>
          </properties>
       </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SEARCH_FILTERs.00" nl="1" quotes="" text="Package filter" tooltip="    all: Display information for all packages (no option at command line)      only fully installed packages: Display information for fully installed packages only. (-i option at command line)      only partially installed packages: Display information for partially installed packages only. (-p option at command line)" required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">UC4_RV.PM_SOLARIS.QUERY_FILTER</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_SOLARIS.PRV.VARA.QUERY_FILTER</entry>
             <entry name="text">Package filter</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_SEARCH_FILTERs.00</entry>
@@ -142,7 +142,7 @@ Example: system,application</entry>
          </properties>
       </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_OUTPUT_FORMATs.00" nl="1" quotes="" text="Output format" tooltip="    category, package, description: lists the primary category, package instance, and the names of all completely installed and partially installed packages. It displays one line for each package selected. (Impl. note: no formatting option at the command line)      package abbreviation, package name, architecture, version: Designate an extracted listing of package information. The listing contains the package abbreviation, package name, package architecture (if available) and package version (if available). (Implementation note: use the option -x at command line.)" required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">UC4_RV.PM_SOLARIS.QUERY_OUTPUT</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_SOLARIS.PRV.VARA.QUERY_OUTPUT</entry>
             <entry name="text">Output format</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_OUTPUT_FORMATs.00</entry>
