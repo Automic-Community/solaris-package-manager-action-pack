@@ -2,7 +2,7 @@
 Documentation     NOTE:
 ...               add note here
 Suite Setup       Suite Setup
-Force Tags        INSTALL
+Force Tags        INSTALL    unix
 Test Template     Install Template
 Resource          ../../resources/keywords.txt
 
@@ -22,13 +22,13 @@ Install Template
     Init Action    ${ACTION_INSTALL}
     Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
     Action Set    ${PRT_INSTALL_PKG_SRC}    ${source}
-    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    BoulderDash
+    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    ventum2011@
     Action Execute
     Init Action    ${ACTION_INSTALL}
     Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
     Action Set    ${PRT_INSTALL_PKG_SRC}    ${source}
     Action Set    ${PRT_INSTALL_PKG_FAIL_IF_INSTALLED}    ${failIfInstalled}
-    Action Set    ${PRT_INSTALL_SUDO_PASSWORD}    BoulderDash
+    Action Set    ${PRT_INSTALL_SUDO_PASSWORD}    ventum2011@
     Action Execute
     Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}

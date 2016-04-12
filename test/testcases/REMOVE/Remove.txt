@@ -2,7 +2,7 @@
 Documentation     NOTE:
 ...               add note here
 Suite Setup       Suite Setup
-Force Tags        REMOVE
+Force Tags        REMOVE    unix
 Test Template     Remove Template
 Resource          ../../resources/keywords.txt
 
@@ -17,11 +17,11 @@ Remove Template
     Init Action    ${ACTION_INSTALL}
     Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
     Action Set    ${PRT_INSTALL_PKG_SRC}    ${_WORKING_DIR}/nano-2.0.9-sol10-sparc-local
-    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    BoulderDash
+    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    ventum2011@
     Action Execute
     Init Action    ${ACTION_REMOVE}
     Action Set    ${PRT_REMOVE_PACKAGE_NAME}    ${name}
-    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    BoulderDash
+    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    ventum2011@
     Action Execute
     Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}
