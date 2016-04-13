@@ -8,7 +8,7 @@ Library           com.automic.robot.itpa.ItpaLibrary
 Create data test
     Init Target Server
     Download datatest    /testdata/PCK.AUTOMIC_SOLARIS
-    
+
 Download datatest
     [Arguments]    ${path}
     Action Connect    ${_AE_HOST}    ${_AE_PORT}    ${_AE_USER}    ${_AE_PASS}    ${_AE_TEMP_FOLD}

@@ -15,20 +15,10 @@ Install Template
     [Arguments]    ${name}    ${source}    ${returnCode}    ${returnStatus}    ${returnReport}
     Init Action    ${ACTION_REMOVE}
     Action Set    ${PRT_REMOVE_PACKAGE_NAME}    ${name}
-    Action Set    ${PRT_REMOVE_SUDO_PASSWORD}    ventum2011@
     Action Execute
     Init Action    ${ACTION_INSTALL}
     Action Set    ${PRT_INSTALL_PKG_NAME}    ${name}
     Action Set    ${PRT_INSTALL_PKG_SRC}    ${source}
-    #Action Set    ${PRT_INSTALL_PKG_FAIL_IF_INSTALLED}    ${input2}
-    #Action Set    ${PRT_INSTALL_ADMIN_FILE}    ${input2}
-    #Action Set    ${PRT_INSTALL_RESPONSE_FILE}    ${input2}
-    #Action Set    ${PRT_INSTALL_GLOBAL_ZONE}    ${input2}
-    #Action Set    ${PRT_INSTALL_ROOT_PATH}    ${input2}
-    #Action Set    ${PRT_INSTALL_WRITE_SPOOL_DIR}    ${input2}
-    #Action Set    ${PRT_INSTALL_VERBOSE}    ${input2}
-    #Action Set    ${PRT_INSTALL_RPM_HTTP_PROXY}    ${input2}
-    Action Set    ${PRT_INSTALL_SUDO_PASSWORD}    ventum2011@
     Action Execute
     Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}

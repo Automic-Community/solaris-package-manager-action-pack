@@ -13,6 +13,10 @@ Query Package Name Empty Catalog Empty
 *** Keywords ***
 Query Template
     [Arguments]    ${name}    ${catalog}    ${ondevice}    ${returnCode}    ${returnStatus}    ${returnReport}
+    Init Action    ${ACTION_INSTALL}
+    Action Set    ${PRT_INSTALL_PKG_NAME}    ${returnReport}
+    Action Set    ${PRT_INSTALL_PKG_SRC}    ${ondevice}
+    Action Execute
     Init Action    ${ACTION_QUERY}
     Action Set    ${PRT_QUERY_PKG_NAME}    ${name}
     Action Set    ${PRT_QUERY_FILTER_BY_CAT}    ${catalog}
