@@ -7,7 +7,8 @@ Test Template     Remove Template
 Resource          ../../resources/keywords.txt
 
 *** Test Cases ***    NAME        RETURN CODE    RETURN STATUS                   RETURN REPORT
-Remove                SMCnano     0              ${ENDED_OK - ended normally}    SMCnano
+Remove                [Tags]      SMOKE_TEST
+                      SMCnano     0              ${ENDED_OK - ended normally}    SMCnano
 
 Remove Not Exist      NotExist    1              ENDED_NOT_OK - aborted          ERROR: no package associated with
 
