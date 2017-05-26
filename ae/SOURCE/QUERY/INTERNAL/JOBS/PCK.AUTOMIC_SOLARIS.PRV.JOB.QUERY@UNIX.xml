@@ -146,7 +146,7 @@ echo "### end pkginfo output ###"]]></MSCRI>
 <LoginFsc/>
 </OUTPUTSCAN>
 <POST_SCRIPT mode="1" replacementmode="1" state="1">
-<OSCRI><![CDATA[:SET &variableName# = "UC4_RV.PM_SOLARIS.QUERY_&$ACTIVATOR_RUNID#"
+<OSCRI><![CDATA[:SET &variableName# = "UC4_RV.PM_SOLARIS.QUERY_&$ACTIVATOR_RUNID#.&$PHYS_DATE_YYYYMMDD#"
 :SET &variablePath# = ""
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CREATE_PASS_VALUES_VARIABLE
 :set &output# = 0
