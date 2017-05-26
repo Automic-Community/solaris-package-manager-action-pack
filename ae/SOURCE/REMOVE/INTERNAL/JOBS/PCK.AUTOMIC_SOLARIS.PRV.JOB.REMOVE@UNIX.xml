@@ -25,10 +25,10 @@
 <ExtRepDef>1</ExtRepDef>
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
-<DeactWhen/>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
 <DeactDelay>0</DeactDelay>
 <AutoDeactAlways>0</AutoDeactAlways>
 <AttDialog>0</AttDialog>
@@ -55,7 +55,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
