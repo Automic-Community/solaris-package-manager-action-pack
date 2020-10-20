@@ -1,0 +1,30 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Suite Setup
+Force Tags        QUERY    unix
+Test Template     Query Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    PACKAGENAME    CATALOG     ONDEVICE                                        RETURN CODE    RETURN STATUS                   RETURN REPORT
+Query Package Name Empty Catalog Empty
+                      ${EMPTY}       ${EMPTY}    ${_WORKING_DIR}/nano-2.0.9-sol10-sparc-local    0              ${ENDED_OK - ended normally}    SMCnano
+
+*** Keywords ***
+Query Template
+    [Arguments]    ${name}    ${catalog}    ${ondevice}    ${returnCode}    ${returnStatus}    ${returnReport}
+    Init Action    ${ACTION_INSTALL}
+    Action Set    ${PRT_INSTALL_PKG_NAME}    ${returnReport}
+    Action Set    ${PRT_INSTALL_PKG_SRC}    ${ondevice}
+    Action Execute
+    Init Action    ${ACTION_QUERY}
+    Action Set    ${PRT_QUERY_PKG_NAME}    ${name}
+    Action Set    ${PRT_QUERY_FILTER_BY_CAT}    ${catalog}
+    Action Set    ${PRT_QUERY_FILTER_BY_ARCH}    sparc
+    Action Set    ${PRT_QUERY_SW_DEVICE}    ${ondevice}
+    Action Set Timeout    1800
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${returnReport}

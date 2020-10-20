@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_SOLARIS.PUB.DOC">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[These actions install, upgrade, remove and query installed packages on your Solaris host. 
+
+The actions are wrappers around the pkgadd, pkgrm, pkginfo command line tools.
+
+=Supported versions=
+
+See http://docs.automic.com/compatibility?len=Package.Solaris&comp=PCK.AUTOMIC_SOLARIS&version=1.0.0
+
+=Rollback=
+
+The actions getting some system information don't need rollbacks, because they do not change the state of your system. Such a method is QUERY.
+
+Actions potentially changing the state of your system (INSTALL, REMOVE) do not have rollbacks defined yet.]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>
